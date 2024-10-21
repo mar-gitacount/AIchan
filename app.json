@@ -1,4 +1,7 @@
 {
   "name": "AIproject",
-  "displayName": "AIちゃん"
+  "displayName": "AIちゃん",
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-2383157187090434~4430156094" 
+  }
 }

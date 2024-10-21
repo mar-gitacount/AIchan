@@ -82,10 +82,17 @@ android {
         applicationId "com.aiproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
+        versionCode 3
         versionName "1.0"
     }
     signingConfigs {
+        release{
+            storeFile file("C:/Users/user/AIproject/android/app/your-release-key.keystore")
+            storePassword "masa1205takeru"
+            keyAlias "your-key-alias"
+            keyPassword "masa1205takeru"
+
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
@@ -100,7 +107,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
